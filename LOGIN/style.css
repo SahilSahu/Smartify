@@ -83,7 +83,7 @@ Log in form
 .login form {
   animation: form-entry 3s ease-in-out;
   background: #111;
-  background: linear-gradient(45deg,#af07ed, #06092E 90%);
+  background: linear-gradient(45deg,rgba(104, 104, 107,0.7), rgba(0, 0, 77) 57%);
   border: 6px solid #00a4a2;
   box-shadow: 0 0 35px #00fffd;
   border-radius: 25px;
@@ -119,7 +119,7 @@ Log in form
   animation: box-glow 1s ease-out infinite alternate;
   background: #0B4252;
   background: linear-gradient(#333933, #222922);
-  border-color: #00fffc;
+  border-color: #467dea;
   box-shadow: 0 0 5px rgba(0, 255, 253, 0.2), inset 0 0 5px rgba(0, 255, 253, 0.1), 0 2px 0 black;
   color: #efe;
   outline: none; }
@@ -138,7 +138,7 @@ Log in form
   color: #fff;
   display: block;
   font-family: 'Cabin', helvetica, arial, sans-serif;
-  font-size: 13px;
+  font-size: 30px;
   font-weight: 400;
   height: 40px;
   line-height: 40px;
@@ -146,15 +146,32 @@ Log in form
   padding: 0;
   position: relative;
   text-shadow: 0 -1px 0 #000;
-  width: 400px;
+  width: 200px;
   transition: 1s all; }
+  .login button::after {
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  height: 100%;
+  left: -35%;
+  top: 0;
+  transform: skew(50deg);
+  transition-duration: 0.6s;
+  transform-origin: top left;
+  width: 0;
+  }
 .login button:hover,
 .login button:focus {
-  background: #0C6125;
-  background: linear-gradient(#393939, #292929);
-  color: #00fffc;
+  background: #000;
+  background: linear-gradient(#393939, #000);
+  color: #00fff6;
   outline: none;
-  transition: 1s all; }
+  transition: 1s all;
+  height: 100%;
+  width: 75%;
+  box-shadow: 2px 5px 3px #fff;
+   }
 .login button:active {
   background: #292929;
   background: linear-gradient(#393939, #292929);
@@ -169,8 +186,8 @@ Spinner
   background-color: rgba(0,0,0,.5);
   
   border-radius: 50%;
-  border: 10px solid #00a4a2;
-  box-shadow: 0 0 0 2px black, 0 0 0 6px #00fffc;
+  border: 10px solid #68686b;
+  box-shadow: 0 0 0 2px black, 0 0 0 6px #467dea;
   height: 600px;
   width: 600px;
   position: absolute;
@@ -183,7 +200,7 @@ Spinner
 #inner-cirlce1 {
   background-color: rgba(0,0,0,.1);
   border-radius: 50%;
-  border: 36px solid #00fffc;
+  border: 36px solid #0000ff;
   height: 544px;
   width: 544px;
   margin: 10px; }
@@ -192,7 +209,7 @@ Spinner
     width: 240px;
     height: 480px;
     background-color: rgba(0,0,0,.1);
-    background: linear-gradient(-45deg,#000,#000fff 100%);
+    background: linear-gradient(-45deg,#000,#000 100%);
     position: absolute;
     top: 0;
     left: 0; }
@@ -201,7 +218,7 @@ Spinner
     width: 480px;
     height: 240px;
     background-color: rgba(0,0,0,.1);
-    background: linear-gradient(-45deg,#000,#000fff 100%);
+    background: linear-gradient(-45deg,#000,#000 100%);
     position: absolute;
     top: 0;
     left: 0; }
@@ -262,15 +279,15 @@ Animation Keyframes
     width: 500px; } }
 @keyframes box-glow {
   0% {
-    border-color: #00b8b6;
+    border-color: #2395db;
     box-shadow: 0 0 5px rgba(0, 255, 253, 0.2), inset 0 0 5px rgba(0, 255, 253, 0.1), 0 2px 0 black; }
 
   100% {
-    border-color: #00fffc;
+    border-color: #467dea;
     box-shadow: 0 0 20px rgba(0, 255, 253, 0.6), inset 0 0 10px rgba(0, 255, 253, 0.4), 0 2px 0 black; } }
 @keyframes text-glow {
   0% {
-    color: #00a4a2;
+    color: #6dbde8;
     text-shadow: 0 0 10px #000, 0 0 20px #000, 0 0 30px #000, 0 0 40px #000, 0 0 50px #000, 0 0 60px #000, 0 0 70px #000; }
 
   100% {
@@ -278,16 +295,16 @@ Animation Keyframes
     text-shadow: 0 0 20px rgba(0, 255, 253, 0.6), 0 0 10px rgba(0, 255, 253, 0.4), 0 2px 0 black; } }
 @keyframes before-glow {
   0% {
-    border-bottom: 10px solid #00fffc; }
+    border-bottom: 10px solid #000fed; }
 
   100% {
-    border-bottom: 10px solid #000fed; } }
+    border-bottom: 10px solid #37ebff; } }
 @keyframes after-glow {
   0% {
-    border-top: 16px solid #00fffc; }
+    border-top: 16px solid #000fed; }
 
   100% {
-    border-top: 16px solid #000fed; } }
+    border-top: 16px solid #37ebff; } }
 @keyframes circle1 {
   0% {
     -moz-transform: rotate(0deg);
