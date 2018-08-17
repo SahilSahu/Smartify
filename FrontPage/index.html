@@ -7,13 +7,71 @@
   
   
       <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!--link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script-->
+      <style type="text/css">
+        .arrow {
+          text-align: center;
+          margin: 8% 0;
+        }
+        .bounce {
+          -moz-animation: bounce 2s infinite;
+          -webkit-animation: bounce 2s infinite;
+          animation: bounce 2s infinite;
+        }
 
-  
+        @keyframes bounce {
+          0%, 20%, 50%, 80%, 100% {
+            transform: translateY(0);
+          }
+          40% {
+            transform: translateY(-30px);
+          }
+          60% {
+            transform: translateY(-15px);
+          }
+        }
+
+        .hideme
+        {
+            opacity:0;
+        }
+      </style>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script>
+      $(document).ready(function(){
+        // Add smooth scrolling to all links
+        $("a").on('click', function(event) {
+
+          // Make sure this.hash has a value before overriding default behavior
+          if (this.hash !== "") {
+            // Prevent default anchor click behavior
+            event.preventDefault();
+
+            // Store hash
+            var hash = this.hash;
+
+            // Using jQuery's animate() method to add smooth page scroll
+            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+            $('html, body').animate({
+              scrollTop: $(hash).offset().top
+            }, 800, function(){
+         
+              // Add hash (#) to URL when done scrolling (default click behavior)
+              window.location.hash = hash;
+            });
+          } // End if
+        });
+      });
+      </script>
 </head>
 
 <body>
 
-  <div class="header">
+  <div class="header" id="header">
     <div class="bars" id="nav-action"><span class="bar span1"> </span></div>
   <!--Navbar Links-->
     <nav id="nav">
@@ -34,20 +92,37 @@
         <font size="4px">By <a href="C:/Users/Abc/Desktop/SmartiFy/MeetTeam/index.html" >BitCoders</a> on August 9, 2018</font>
       </div>
     </div>
+    
+    <div class="arrow bounce" style="margin: 100pt auto;border: 1px solid white;
+          border-top-left-radius: 50px;
+          border-top-right-radius: 50px;">
+      <font size="100px"><a class="fa fa-arrow-down" href="#main"></a></font>
+    </div>
+    <!--div style="margin: 150pt auto;"><a href="#main"><span class="glyphicon glyphicon-chevron-left"></span>Scroll</a></div-->
+      
+
+    
   </div>
-  <section class="content">
+  <section id="main" class="content" style="min-height: 55%;">
+    <div class="hideme">
   <p><b><font size="+4"><center>What is SQUID?</center> </font></b>
       <hr>
       <br>
       <br>
+      
       <font size ="+2"><b>S</b>treet <b>QU</b>ality <b>ID</b>entification is a go-to built keeping in mind the issues 53,720 vehicles face who hit the streets every single day, as indicated by the statistics in an article by The Times Of India.<br> <br><b>SQUID</b> enables a comprehensive map of a city’s street surface quality and portrays a bird’s eye view of the streets, enabling the admin to monitor the conditions in real time(pothole complications) and take informed decisions for the development and improvement of the street quality.<br><br> Other beneficiaries would be ambulances, fire brigade officials, as they have to deal with cases that are time-critical, transport companies for moving fragile instruments such as medical equipments, as they can make proper decisions and decide an appropriate route....</font></p>
       
-    <p align="center"><a href="C:/Users/Abc/Desktop/SmartiFy/LOGIN/index.html" class="btn twtr">Log_In.</a>
+    <p align="center"><a href="C:/Users/Abc/Desktop/SmartiFy/LOGIN/index.html" class="butn twtr">Log_In.</a>
     </p>
     <footer>
       <center><font face="Comic Sans MS" size="2" color = "#fff"><p>&copy; All rights reserved | Design By BITCODERS</p></font></center>
     </footer>
+    </div>
   </section>
+  <div class="arrow bounce" style="margin: 25pt auto;">
+      <font size="100px"><a class="fa fa-arrow-up" href="#header"></a></font>
+    </div>
+
   
   <script type="text/javascript">
     var bars = document.getElementById("nav-action");
@@ -64,6 +139,30 @@
       nav.classList.toggle('visible');
     }
   </script>
-  
+  <script type="text/javascript">
+    $(document).ready(function() {
+    
+        /* Every time the window is scrolled ... */
+        $(window).scroll( function(){
+        
+            /* Check the location of each desired element */
+            $('.hideme').each( function(i){
+                
+                var bottom_of_object = $(this).position().top + $(this).outerHeight();
+                var bottom_of_window = $(window).scrollTop() + $(window).height();
+                
+                /* If the object is completely visible in the window, fade it it */
+                if( bottom_of_window > bottom_of_object ){
+                    
+                    $(this).animate({'opacity':'1'},1500);
+                        
+                }
+                
+            }); 
+        
+        });
+        
+    });
+  </script>
 </body>
 </html>

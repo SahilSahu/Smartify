@@ -187,7 +187,7 @@ nav.visible li:last-child a {
   align-content: flex-start;
   height:50vw;
   min-height:400px;
-  max-height:550px;
+  max-height:100%;
   min-width:300px;
   color:#eee;
 }
@@ -283,10 +283,10 @@ nav.visible li:last-child a {
 }
 .content{  
   padding:5% 10%;
-  background: linear-gradient(135deg,rgba(255, 255, 255, 0.4),rgba(20, 4, 102,0.8) 50%) ;
+  background: linear-gradient(135deg,rgba(255, 255, 255, 1),rgba(20, 4, 102,0.7) 90%) ;
   text-align:justify
 }
-.btn{
+.butn{
   color:#FFF;
   border:2px solid;
   border-radius:25px;
