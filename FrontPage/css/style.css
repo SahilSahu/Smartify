@@ -283,7 +283,7 @@ nav.visible li:last-child a {
 }
 .content{  
   padding:5% 10%;
-  background: linear-gradient(135deg,rgba(73, 75, 104, 0.1),rgba(38, 80, 119,1) 90%) ;
+  background: linear-gradient(135deg,rgba(255, 255, 255, 0.1),rgba(132,106,221,0.6) 50%) ;
   text-align:justify
 }
 .butn{
